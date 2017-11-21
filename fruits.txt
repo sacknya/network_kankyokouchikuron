@@ -1,0 +1,7 @@
+banana        200
+mango         400
+kiwi           80
+apple         100
+melon         880
+orange        120
+strawberry    480

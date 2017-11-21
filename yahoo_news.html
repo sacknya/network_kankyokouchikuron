@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ja"
+    xmlns:og="http://ogp.me/ns#"
+    xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>Yahoo!ニュース</title>
+<meta name="description" content="Yahoo!ニュースは、新聞・通信社が配信するニュースのほか、映像、雑誌や個人の書き手が執筆する記事など多種多様なニュースを掲載しています。">
+<meta name="keywords" content="ニュース,ヤフー,新着">
+<meta name="robots" content="noarchive">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="dVyTbsDzUrUAjCE1aCH9hKwZ8sOsCsvi2uhuBvasrp8" />
+<link rel="apple-touch-icon-precomposed" href="https://s.yimg.jp/c/icon/s/bsc/2.0/news120.png"/>
+<meta name="msapplication-TileImage" content="https://s.yimg.jp/c/icon/s/bsc/2.0/news144.png"/>
+<meta name="msapplication-TileColor" content="#FFFFFF"/>
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Yahoo!ニュース" />
+<meta property="og:description" content="Yahoo!ニュースは、新聞・通信社が配信するニュースのほか、映像、雑誌や個人の書き手が執筆する記事など多種多様なニュースを掲載しています。" />
+<meta property="og:image" content="https://s.yimg.jp/images/jpnews/cre/common/all/images/fbico_ogp_1200x630.png" />
+<meta property="og:url" content="https://news.yahoo.co.jp/"/>
+<meta property="og:locale" content="ja_JP" />
+<meta property="fb:app_id" content="276725822409153"/>
+
+<meta name="twitter:app:country" content="JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yahoo!ニュース" />
+<meta name="twitter:description" content="Yahoo!ニュースは、新聞・通信社が配信するニュースのほか、映像、雑誌や個人の書き手が執筆する記事など多種多様なニュースを掲載しています。" />
+<meta name="twitter:site" content="@YahooNewsTopics">
+<meta name="twitter:image" content="https://s.yimg.jp/images/jpnews/cre/common/all/images/fbico_ogp_1200x630.png" />
+<meta name="twitter:app:name:iphone" content="Yahoo!ニュース" />
+<meta name="twitter:app:id:iphone" content="407906756" />
+<meta name="twitter:app:url:iphone" content="yjtrend://l/top/" />
+<meta name="twitter:app:name:googleplay" content="Yahoo!ニュース" />
+<meta name="twitter:app:id:googleplay" content="jp.co.yahoo.android.news" />
+<meta name="twitter:app:url:googleplay" content="yjnews://l/top/" />
+
+<meta property="al:ios:app_name" content="Yahoo!ニュース" />
+<meta property="al:ios:app_store_id" content="407906756" />
+<meta property="al:ios:url" content="yjtrend://l/top/" />
+<meta property="al:android:app_name" content="Yahoo!ニュース" />
+<meta property="al:android:package" content="jp.co.yahoo.android.news" />
+<meta property="al:android:url" content="yjnews://l/top/" />
+
+<link type="text/css" rel="stylesheet" href="https://s.yimg.jp/images/jpnews/cre/common/pc/css/common_pc_v2.css?20170420" media="all" />
+<link type="text/css" rel="stylesheet" href="https://s.yimg.jp/images/jpnews/cre/news_main/pc/css/news_top_pc_v4.css?20170420" media="all" />
+<link type="text/css" rel="stylesheet" href="https://s.yimg.jp/images/jpnews/cre/video/pc/embedplayer_pc.css?20170420" media="all" />
+
+<!-- SpaceID=0 robot -->
+
+</head>
+
+<body class="yj950-2">
+
+<div id="wrapper">
+
+<div id="header">
+<span class="yjGuid"><a name="yjPagetop" id="yjPagetop"></a><img src="https://s.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1" height="1" alt="このページの先頭です"></span>
+<span class="yjSkip"><a href="#yjContentsStart"><img src="https://s.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" alt="このページの本文へ" width="1" height="1" ></a></span>
+
+<!-- SpaceID=0 robot -->
+
+<!-- SpaceID=0 robot -->
+
+<!-- SpaceID=0 robot -->
+
+<!-- SpaceID=0 robot -->
+
+
+</div>
+
+<hr class="yjSeparation">
+
+<div id="contents">
+
+<div id="contentsHeader">
+
+<div id="headerSearch">
+<div class="searchWrapper">
+    <form action="https://news.yahoo.co.jp/search/" method="get" id="searchNewsForm" class="current" data-beacon="https://s.yimg.jp/images/clear.gif">
+        <div class="inputWrapper">
+            <input class="searchInput" type="text" name="p" placeholder="キーワードを入力">
+                        <input type="hidden" value="utf-8" name="ei">
+                    <input type="hidden" value="news_sw" name="fr">
+                    </div>
+        <span class="searchButton"><input type="submit" value="検索"></span>
+            <p class="advanced"><a href="https://news.yahoo.co.jp/search/advanced">条件指定</a></p>
+        </form>
+</div>
+
+<ul class="personalInfo">
+    <li class="myPage">
+        <a href="https://news.yahoo.co.jp/profile/login" onmousedown="this.href='https://news.yahoo.co.jp/profile/login'"><span class="myName">ユーザーページ</span></a>
+    </li>
+    <li class="purchase">
+        <a href="https://headlines.yahoo.co.jp/purchase/" onmousedown="this.href='https://headlines.yahoo.co.jp/purchase/'">購読一覧</a>
+    </li>
+    <li class="setting">
+        <a href="https://news.yahoo.co.jp/profile/settings/" onmousedown="this.href='https://news.yahoo.co.jp/profile/settings/'">設定</a>
+    </li>
+</ul>
+
+</div>
+<div id="globalNav">
+<ul id="gnPri">
+    <li id="gnPriTop" class="current"><a href="https://news.yahoo.co.jp/" onmousedown="this.href='https://news.yahoo.co.jp/'">トップ</a></li>    <li id="gnPriNew"><a href="https://news.yahoo.co.jp/flash" onmousedown="this.href='https://news.yahoo.co.jp/flash'">速報</a></li>    <li id="gnPriPhoto"><a href="https://news.yahoo.co.jp/photo" onmousedown="this.href='https://news.yahoo.co.jp/photo'">写真</a></li>    <li id="gnPriVideo"><a href="https://headlines.yahoo.co.jp/videonews/" onmousedown="this.href='https://headlines.yahoo.co.jp/videonews/'">映像</a></li>    <li id="gnPriZasshi"><a href="https://news.yahoo.co.jp/zasshi" onmousedown="this.href='https://news.yahoo.co.jp/zasshi'">雑誌</a></li>    <li id="gnPriBylines"><a href="https://news.yahoo.co.jp/byline/" onmousedown="this.href='https://news.yahoo.co.jp/byline/'">個人</a></li>    <li id="gnPriFeature"><a href="https://news.yahoo.co.jp/feature" onmousedown="this.href='https://news.yahoo.co.jp/feature'">特集</a></li>    <li id="gnPriPolls"><a href="https://news.yahoo.co.jp/polls/" onmousedown="this.href='https://news.yahoo.co.jp/polls/'">意識調査</a></li>    <li id="gnPriRanking"><a href="https://news.yahoo.co.jp/ranking" onmousedown="this.href='https://news.yahoo.co.jp/ranking'">ランキング</a></li></ul>
+
+<div class="gnSecWrap">
+<ul id="gnSec">
+<li class="current"><a href="https://news.yahoo.co.jp/" onmousedown="this.href='https://news.yahoo.co.jp/'">主要</a></li><li><a href="https://news.yahoo.co.jp/hl?c=dom" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=dom'">国内</a></li><li><a href="https://news.yahoo.co.jp/hl?c=c_int" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=c_int'">国際</a></li><li><a href="https://news.yahoo.co.jp/hl?c=bus" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=bus'">経済</a></li><li><a href="https://news.yahoo.co.jp/hl?c=c_ent" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=c_ent'">エンタメ</a></li><li><a href="https://news.yahoo.co.jp/hl?c=c_spo" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=c_spo'">スポーツ</a></li><li><a href="https://news.yahoo.co.jp/hl?c=c_sci" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=c_sci'">IT・科学</a></li><li><a href="https://news.yahoo.co.jp/hl?c=c_life" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=c_life'">ライフ</a></li><li><a href="https://news.yahoo.co.jp/hl?c=loc" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=loc'">地域</a></li></ul>
+<ul id="gnSecSub">
+<li><a href="https://news.yahoo.co.jp/list/" onmousedown="this.href='https://news.yahoo.co.jp/list/'">アーカイブ</a></li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<div id="contentsBody">
+<span class="yjGuid"><a name="yjContentsStart" id="yjContentsStart"></a><img src="https://s.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" alt="ここから本文です" width="1" height="1"></span>
+
+<div id="main">
+
+<div id="editorsPick">
+<noscript>
+<div class="alertBox">
+<div class="alert">
+<i></i><p>現在<em>JavaScriptが無効</em>になっています。Yahoo!ニュースのすべての機能を利用するためには、JavaScriptの設定を有効にしてください。<br>JavaScriptの設定を変更する方法は<a href="https://www.yahoo-help.jp/app/noscript">こちら</a>。</p>
+</div>
+</div>
+</noscript>
+
+<!--[if lt IE 9]>
+<div class="alertBox">
+    <div class="alert">
+        <i></i><p>お使いのInternet Explorerは古いバージョンのため、正しく表示されない可能性があります。最新のバージョンにアップデートするか、別のブラウザーからご利用ください。<br>
+        <a href="https://about.yahoo.co.jp/info/msiesp/">Internet Explorerのアップデートについて</a></p>
+    </div>
+</div>
+<![endif]-->
+
+
+
+
+
+<div id="epTabTop" class="epContents current hasBigImg top">
+    <ul class="topics">
+                                                        <li class="topTpi">
+        <div>
+<h1 class="ttl"><a href="https://news.yahoo.co.jp/pickup/6259424" onmousedown="this.href='https://news.yahoo.co.jp/pickup/6259424'">座間9遺体「殺害し証拠隠滅」<span class="icPhoto">写真</span></a></h1>
+</div>
+</li>
+                                    <li>
+        <div>
+<p class="ttl"><a href="https://news.yahoo.co.jp/pickup/6259428" onmousedown="this.href='https://news.yahoo.co.jp/pickup/6259428'">座間9遺体 男は2カ月前に入居<span class="icPhoto">写真</span></a></p>
+</div>
+</li>
+                                    <li>
+        <div>
+<p class="ttl"><a href="https://news.yahoo.co.jp/pickup/6259429" onmousedown="this.href='https://news.yahoo.co.jp/pickup/6259429'">特別国会 開会後に延長協議<span class="icNew">new</span></a></p>
+</div>
+</li>
+                                    <li>
+        <div>
+<p class="ttl"><a href="https://news.yahoo.co.jp/pickup/6259421" onmousedown="this.href='https://news.yahoo.co.jp/pickup/6259421'">韓国と中国 関係正常化で合意<span class="icPhoto">写真</span><span class="icNew">new</span></a></p>
+</div>
+</li>
+                                    <li>
+        <div>
+<p class="ttl"><a href="https://news.yahoo.co.jp/pickup/6259434" onmousedown="this.href='https://news.yahoo.co.jp/pickup/6259434'">転勤敬遠 一般職選ぶ20代男性<span class="icPhoto">写真</span></a></p>
+</div>
+</li>
+                                    <li>
+        <div>
+<p class="ttl"><a href="https://news.yahoo.co.jp/pickup/6259405" onmousedown="this.href='https://news.yahoo.co.jp/pickup/6259405'">性同一性障害ボクサーが引退<span class="icPhoto">写真</span><span class="icNew">new</span></a></p>
+</div>
+</li>
+                                                                    <li class="photoTpi">
+        <div>
+<p class="ttl"><a href="https://news.yahoo.co.jp/pickup/6259437" onmousedown="this.href='https://news.yahoo.co.jp/pickup/6259437'">離婚の鹿賀丈史 ひとりで気楽<span class="icPhoto">写真</span><span class="icNew">new</span></a></p>
+</div>
+</li>
+                                    <li>
+        <div>
+<p class="ttl"><a href="https://news.yahoo.co.jp/pickup/6259409" onmousedown="this.href='https://news.yahoo.co.jp/pickup/6259409'">海老蔵 恋人報道に「ひどい」<span class="icPhoto">写真</span></a></p>
+</div>
+</li>
+    <li class="topicsFt">
+<p class="more"><a href="https://news.yahoo.co.jp/list/" onmousedown="this.href='https://news.yahoo.co.jp/list/'">もっと見る</a></p>
+        <p class="alltopi"><a href="https://news.yahoo.co.jp/topics" onmousedown="this.href='https://news.yahoo.co.jp/topics'">全カテゴリのトピックス一覧</a></p>
+    </li>
+</ul>
+    <ul class="thumbnail">
+<li>
+<a class="img" href="https://news.yahoo.co.jp/pickup/6259437" onmousedown="this.href='https://news.yahoo.co.jp/pickup/6259437'"><img src="https://lpt.c.yimg.jp/im_siggSBFA5G36OxyOeXeJSskxMA---x220-y220-n0-pril-exp3h-bd1-bdx220-bdy220-bdcefefef/q/amd/20171031-00000308-oric-000-view.jpg" width="220" height="220" alt="離婚の鹿賀丈史 ひとりで気楽"></a>
+<p class="leadText"><a href="https://news.yahoo.co.jp/pickup/6259437" onmousedown="this.href='https://news.yahoo.co.jp/pickup/6259437'">離婚の鹿賀丈史 ひとりで気楽</a></p>
+</li>
+</ul>
+    </div>
+<!-- LiveStream -->
+<script type="text/javascript">
+    if (typeof YJNEWS === 'undefined') {
+        YJNEWS = {};
+    }
+    if(typeof YJNEWS.LIVESTREAM === 'undefined') {
+        YJNEWS.LIVESTREAM = {};
+    }
+    YJNEWS.LIVESTREAM.imageServerHost = "https://s.yimg.jp/";
+    YJNEWS.LIVESTREAM.channels = JSON.parse('["nnn","jnn"]');
+    YJNEWS.LIVESTREAM.src = {};
+    YJNEWS.LIVESTREAM.src.nnn = "https://s.yimg.jp/images/jpnews/cre/common/all/html/embed_player_pc_v2.html?id=yahoo_live3ch_w2&auto=on&volume=0&thumb=https://s.yimg.jp/images/jpnews/cre/common/all/images/embed/embed_bg_ntv_news24.png&controlbar=on&service=news&service_type=top&device=pc&bucket_id=&extra=&fullscreen=off";
+    YJNEWS.LIVESTREAM.src.jnn = "https://s.yimg.jp/images/jpnews/cre/common/all/html/embed_player_pc_v2.html?id=yahoo_live1ch_w2&auto=on&volume=0&thumb=https://s.yimg.jp/images/jpnews/cre/common/all/images/cp_live_thum_tbs.jpg&controlbar=on&service=news&service_type=top&device=pc&bucket_id=&extra=&fullscreen=off";
+    YJNEWS.LIVESTREAM.volume = 0;
+</script>
+<div class="movieCont">
+    <div class="movieContTitle">Yahoo!ニュース 動画<span class="icLive">LIVE</span></div>
+    <nav class="movieContList">
+        <ul class="movieContListWrap Tw">
+            <li id="nnn"><span class="img" style="background-image: url(https://s.yimg.jp/images/news/cobranding/nod.png);"></span><span class="name">日テレNEWS24</span></li>
+            <li id="jnn"><span class="img" style="background-image: url(https://s.yimg.jp/images/jpnews/cre/common/all/images/cp_live_logo_tbs.png);"></span><span class="name">TBS ニュース</span></li>
+        </ul>
+    </nav>
+    <!-- 日テレ -->
+    <div class="movieContentInner nnn">
+        <div class="movieActiv" style="display: block">
+                    <div class="livePlayer">
+                <iframe class="embedplayer-iframe nnn" allowFullscreen src="" scrolling="no" frameborder="0" style="border:none;"></iframe>
+            </div>
+                </div>
+        <div class="movieContExplain">
+            <div id="liveProgram">
+                <div class="movieContExplainProgram">
+                    <p class="read">日テレNEWS24は、最新のニュースを動画で24時間お伝えする日本テレビのニュースサイトです。ニュース速報ほか天気予報や地震、津波、台風情報などをお伝えします。</p>
+                    <div class="program">
+                        <table>
+                            <tr>
+                                <th colspan="3">主な配信プログラム</th>
+                            </tr>
+                            <tr>
+                                <td class="time">毎日</td>
+                                <td class="time">7:00-9:00</td>
+                                <td>Wake-Up News</td>
+                            </tr>
+                            <tr>
+                                <td class="time">平日</td>
+                                <td class="time">12:00-15:00</td>
+                                <td>the SOCIAL</td>
+                            </tr>
+                            <tr>
+                                <td class="time">毎日</td>
+                                <td class="time">18:00-21:00</td>
+                                <td>Evening News</td>
+                            </tr>
+                        </table>
+                    </div><!-- /.program -->
+                </div><!-- /.movieContExplainProgram -->
+            </div><!-- /.liveProgram -->
+        </div><!-- /.movieContExplain -->
+    </div><!-- /.movieContentInner.act-->
+    <!-- 日テレ -->
+    <!-- TBS -->
+    <div class="movieContentInner jnn"><!-- 非表示の局 -->
+        <div class="movieActiv" style="display: block">
+                    <div class="livePlayer">
+                <iframe class="embedplayer-iframe jnn" allowFullscreen src="" scrolling="no" frameborder="0" style="border:none;"></iframe>
+            </div>
+                </div>
+        <div class="movieContExplain">
+            <div id="liveProgram">
+                <div class="movieContExplainProgram">
+                    <p class="read">TBS・JNN（Japan News Network）系列の圧倒的情報量と徹底した取材力をもとに、9人の女性キャスターが最新ニュースをお届け。（毎日 5:00-24:00に配信します）</p>
+                    <div class="program">
+                        <table>
+                            <tr>
+                                <th colspan="3">主な配信プログラム</th>
+                            </tr>
+                            <tr>
+                                <td class="time">毎日</td>
+                                <td class="time">5:00-11:00</td>
+                                <td>モーニングニュース</td>
+                            </tr>
+                            <tr>
+                                <td class="time">毎日</td>
+                                <td class="time">11:00-16:00</td>
+                                <td>ストレートニュース</td>
+                            </tr>
+                            <tr>
+                                <td class="time">毎日</td>
+                                <td class="time">16:00-20:00</td>
+                                <td>イブニングニュース</td>
+                            </tr>
+                            <tr>
+                                <td class="time">毎日</td>
+                                <td class="time">20:00-24:00</td>
+                                <td>ナイトニュース</td>
+                            </tr>
+                        </table>
+                    </div><!-- /.program -->
+                </div><!-- /.movieContExplainProgram -->
+            </div><!-- /.liveProgram -->
+        </div><!-- /.movieContExplain -->
+    </div><!-- /.movieContentInner-->
+    <!-- TBS -->
+</div><!-- .movieCont -->
+<!-- /LiveStream -->
+
+</div>
+<noscript>
+<div class="maintenance alert">
+<p>現在JavaScriptが無効です。</p>
+<p>Yahoo!ニュースのすべての機能を利用するには、JavaScriptの設定を有効にし画面を最新の状態に更新してください。</p>
+<p>JavaScriptの設定を変更する方法は<a href="https://www.yahoo-help.jp/app/noscript">こちら</a>。<br><br><a href="/">Yahoo!ニュース</a></p>
+</div>
+</noscript>
+
+<div class="maintenance alert">
+<p>現在Cookieが取得できません。</p>
+<p>Yahoo!ニュースのすべての機能を利用するには、Cookieの設定を有効にし画面を最新の状態に更新してください。</p>
+<p>Cookieの設定を変更する方法は<a href="https://www.yahoo-help.jp/app/answers/detail/a_id/43880/p/533/">こちら</a>。<br><br><a href="/">Yahoo!ニュース</a></p>
+</div>
+
+<div class="fdFt">
+    <div>
+        <ul class="ftCategory">
+<li><a href="https://news.yahoo.co.jp/" onmousedown="this.href='https://news.yahoo.co.jp/'">主要</a>|</li>
+<li><a href="https://news.yahoo.co.jp/hl?c=dom" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=dom'">国内</a>|</li>
+<li><a href="https://news.yahoo.co.jp/hl?c=c_int" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=c_int'">国際</a>|</li>
+<li><a href="https://news.yahoo.co.jp/hl?c=bus" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=bus'">経済</a>|</li>
+<li><a href="https://news.yahoo.co.jp/hl?c=c_ent" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=c_ent'">エンタメ</a>|</li>
+<li><a href="https://news.yahoo.co.jp/hl?c=c_spo" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=c_spo'">スポーツ</a>|</li>
+<li><a href="https://news.yahoo.co.jp/hl?c=c_sci" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=c_sci'">IT・科学</a>|</li>
+<li><a href="https://news.yahoo.co.jp/hl?c=c_life" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=c_life'">ライフ</a>|</li>
+<li><a href="https://news.yahoo.co.jp/hl?c=loc" onmousedown="this.href='https://news.yahoo.co.jp/hl?c=loc'">地域</a></li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+<div id="sub">
+
+<div id="fixedArea" data-bind="css: { fixed: rightColumn.fixed, unfixed: !rightColumn.fixed }, style: { bottom: rightColumn.moduleButtom , left: rightColumn.moduleLeft }">
+      <!-- SpaceID=0 robot -->
+  
+      <!-- SpaceID=0 robot -->
+  
+
+
+
+<div class="subMod subRanking">
+    <div class="hd">
+        <h3 class="ttl">アクセスランキング</h3>
+    </div>
+    <ol class="bd">
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171031-00010001-binsider-bus_all" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171031-00010001-binsider-bus_all'">
+                <span class="rankNum">1</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://lpt.c.yimg.jp/im_siggmgDlavExZZhoPHDMODxOgQ---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171031-00010001-binsider-000-view.jpg" width="60" height="60" alt="男だって「転勤はイヤ」。一般職を選びたい生活重視の20代男性が増加"></span>
+                        <span class="ttl">男だって「転勤はイヤ」。一般職を選びたい生活重視の20代男性が増加</span>
+                        <span class="source">BUSINESS INSIDER JAPAN</span>
+                <span class="date">10/31(火) 12:10</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171031-00000500-san-soci" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171031-00000500-san-soci'">
+                <span class="rankNum">2</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://lpt.c.yimg.jp/im_sigggGbjKXiJZouNdSIXm.3pww---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171031-00000500-san-000-view.jpg" width="60" height="60" alt="座間市アパートから複数遺体　「他にも同じことやった」頭部２つ　自殺サイト背景か"></span>
+                        <span class="ttl">座間市アパートから複数遺体　「他にも同じことやった」頭部２つ　自殺サイト背景か</span>
+                        <span class="source">産経新聞</span>
+                <span class="date">10/31(火) 1:03</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171031-00000052-jij-soci" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171031-00000052-jij-soci'">
+                <span class="rankNum">3</span>
+                <span class="cap">
+                        <span class="ttl">3億8000万円強奪事件で逮捕＝数人を、強盗傷害容疑―福岡県警</span>
+                        <span class="source">時事通信</span>
+                <span class="date">10/31(火) 11:36</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171031-00000002-spnannex-ent" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171031-00000002-spnannex-ent'">
+                <span class="rankNum">4</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://lpt.c.yimg.jp/im_siggLHz3L7nDBqiQpB0J65c1NA---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171031-00000002-spnannex-000-thumb.jpg" width="60" height="60" alt="貴乃花親方の長男・花田優一さんが結婚　お相手は陣幕親方の娘"></span>
+                        <span class="ttl">貴乃花親方の長男・花田優一さんが結婚　お相手は陣幕親方の娘</span>
+                        <span class="source">スポニチアネックス</span>
+                <span class="date">10/31(火) 5:00</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171030-00000001-withnews-sci" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171030-00000001-withnews-sci'">
+                <span class="rankNum">5</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://lpt.c.yimg.jp/im_siggKa2zxgJETTrWa7nLQ6hXAg---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171030-00000001-withnews-000-view.jpg" width="60" height="60" alt="「インスタ映え弁当」静岡で発売　でも明らかにTwitter映えしてる…　弁当店「きっとそうなると…」"></span>
+                        <span class="ttl">「インスタ映え弁当」静岡で発売　でも明らかにTwitter映えしてる…　弁当店「きっとそうなると…」</span>
+                        <span class="source">withnews</span>
+                <span class="date">10/31(火) 7:00</span>
+                </span>
+            </a>
+        </li>
+        </ol>
+    <p class="ft"><a href="https://news.yahoo.co.jp/ranking/access?ty=t" onmousedown="this.href='https://news.yahoo.co.jp/ranking/access?ty=t'">もっと見る</a></p>
+</div>
+
+<div class="subMod subRanking">
+    <div class="hd">
+        <h3 class="ttl">雑誌アクセスランキング</h3>
+    </div>
+    <ol class="bd">
+            <li>
+            <a href="https://headlines.yahoo.co.jp/article?a=20171031-00023468-president-life" onmousedown="this.href='https://headlines.yahoo.co.jp/article?a=20171031-00023468-president-life'">
+                <span class="rankNum">1</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://lpt.c.yimg.jp/im_siggQsaTIanenfnZpm3xdQNF5g---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171031-00023468-president-000-view.jpg" width="60" height="60" alt="あの"聖心"の女子寮が貫く"秘密のルール""></span>
+                        <span class="ttl">あの"聖心"の女子寮が貫く"秘密のルール"</span>
+                        <span class="source">プレジデントオンライン</span>
+                <span class="date">10/31(火) 9:15</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/article?a=20171030-00010003-nknatiogeo-sctch" onmousedown="this.href='https://headlines.yahoo.co.jp/article?a=20171030-00010003-nknatiogeo-sctch'">
+                <span class="rankNum">2</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://lpt.c.yimg.jp/im_siggzWn2P1wXw4QYHBnqgyIKLA---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171030-00010003-nknatiogeo-000-view.jpg" width="60" height="60" alt="クマの巨大な舌を切除、口閉じられず、原因は不明"></span>
+                        <span class="ttl">クマの巨大な舌を切除、口閉じられず、原因は不明</span>
+                        <span class="source">ナショナル ジオグラフィック日本版</span>
+                <span class="date">10/30(月) 18:06</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/article?a=20171031-00194946-toyo-bus_all" onmousedown="this.href='https://headlines.yahoo.co.jp/article?a=20171031-00194946-toyo-bus_all'">
+                <span class="rankNum">3</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://lpt.c.yimg.jp/im_siggpxGUWfTl_GsgM2MtsIRsFA---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171031-00194946-toyo-000-view.jpg" width="60" height="60" alt="「入社3年以内に会社を辞める人」の4大特徴"></span>
+                        <span class="ttl">「入社3年以内に会社を辞める人」の4大特徴</span>
+                        <span class="source">東洋経済オンライン</span>
+                <span class="date">10/31(火) 11:00</span>
+                </span>
+            </a>
+        </li>
+        </ol>
+    <p class="ft"><a href="https://news.yahoo.co.jp/ranking/access?ty=z" onmousedown="this.href='https://news.yahoo.co.jp/ranking/access?ty=z'">もっと見る</a></p>
+</div>
+<script type="text/javascript" language="JavaScript">
+<!--
+yads_ad_ds = '61428_15361';
+//-->
+</script>
+<div class="adIM_criteo" id="yads_61428_15361">
+<script type="text/javascript" language="JavaScript" src="//yads.c.yimg.jp/js/yads.js"></script>
+</div>
+
+
+
+
+
+<div class="subMod subRanking mv">
+    <div class="hd">
+        <h3 class="ttl">新着動画ニュース</h3>
+    </div>
+    <ol class="bd">
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171031-00010002-reutv-ent" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171031-00010002-reutv-ent'">
+            <span class="cap">
+                        <span class="thumbnail"><span class="img"><img src="https://giwiz-newstop.c.yimg.jp/im_siggDyc6ZAhHRkj9sxf1cwZw6A---x60-y60-n0-pril-exp30d-bd1-bdx60-bdy60-bdc000000/q/amd/20171031-00010002-reutv-000-1-thumb.jpg" width="60" height="60" alt="米俳優K・スペイシー謝罪、当時14歳の子役に性的関係迫る（字幕・30日）"></span><span class="icmv_s"></span></span>
+                        <span class="ttl">米俳優K・スペイシー謝罪、当時14歳の子役に性的関係迫る（字幕・30日）</span>
+                <span class="source">ロイター</span>
+                <span class="date">10/31(火) 15:10</span>
+            </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171031-00010001-kbcv-l40" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171031-00010001-kbcv-l40'">
+            <span class="cap">
+                        <span class="thumbnail"><span class="img"><img src="https://giwiz-newstop.c.yimg.jp/im_sigg7cheC8TuUYnGmiQlkTS4QQ---x60-y60-n0-pril-exp30d-bd1-bdx60-bdy60-bdc000000/q/amd/20171031-00010001-kbcv-000-1-thumb.jpg" width="60" height="60" alt="【福岡】天神現金強盗事件　男7人を逮捕"></span><span class="icmv_s"></span></span>
+                        <span class="ttl">【福岡】天神現金強盗事件　男7人を逮捕</span>
+                <span class="source">九州朝日放送</span>
+                <span class="date">10/31(火) 15:03</span>
+            </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171031-00010000-kbcv-l40" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171031-00010000-kbcv-l40'">
+            <span class="cap">
+                        <span class="thumbnail"><span class="img"><img src="https://giwiz-newstop.c.yimg.jp/im_siggnwlKaKsK8FinrdFxN9Qo0g---x60-y60-n0-pril-exp30d-bd1-bdx60-bdy60-bdc000000/q/amd/20171031-00010000-kbcv-000-1-thumb.jpg" width="60" height="60" alt="【福岡】太宰府市長が議会の解散を通告"></span><span class="icmv_s"></span></span>
+                        <span class="ttl">【福岡】太宰府市長が議会の解散を通告</span>
+                <span class="source">九州朝日放送</span>
+                <span class="date">10/31(火) 15:01</span>
+            </span>
+            </a>
+        </li>
+        </ol>
+</div>
+
+<div class="subMod subRanking">
+    <div class="hd">
+        <h3 class="ttl">個人アクセスランキング</h3>
+    </div>
+    <ol class="bd">
+            <li>
+            <a href="https://news.yahoo.co.jp/byline/yamamotoichiro/20171029-00077523/" onmousedown="this.href='https://news.yahoo.co.jp/byline/yamamotoichiro/20171029-00077523/'">
+                <span class="rankNum">1</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://giwiz-newstop.c.yimg.jp/im_siggPX56CQ10usGOvkjdf0xVsg---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171029-00077523-roupeiro-000-2-view.jpg" width="60" height="60" alt="いまだにマスコミ人が安倍晋三首相の「森友問題や加計学園問題は説明不足」と報じ続けている件について"></span>
+                        <span class="ttl">いまだにマスコミ人が安倍晋三首相の「森友問題や加計学園問題は説明不足」と報じ続けている件について</span>
+                        <span class="source">山本一郎</span>
+                <span class="date">10/29(日) 23:18</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://news.yahoo.co.jp/byline/shinmukoeng/20171030-00077445/" onmousedown="this.href='https://news.yahoo.co.jp/byline/shinmukoeng/20171030-00077445/'">
+                <span class="rankNum">2</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://giwiz-newstop.c.yimg.jp/im_siggRvPCLh2bRanZH_J3JM7ZpA---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171030-00077445-roupeiro-000-8-view.jpg" width="60" height="60" alt="GP優勝者よりも9位の自国ホープに。韓国は宇野昌磨のGP優勝をどう報じているのか"></span>
+                        <span class="ttl">GP優勝者よりも9位の自国ホープに。韓国は宇野昌磨のGP優勝をどう報じているのか</span>
+                        <span class="source">慎武宏</span>
+                <span class="date">10/30(月) 11:34</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://news.yahoo.co.jp/byline/azumiakiko/20171029-00077507/" onmousedown="this.href='https://news.yahoo.co.jp/byline/azumiakiko/20171029-00077507/'">
+                <span class="rankNum">3</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://giwiz-newstop.c.yimg.jp/im_siggqSzbDiDO06BZ2vUw6t3fTA---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171029-00077507-roupeiro-000-2-view.jpg" width="60" height="60" alt="【立憲民主党に暗雲】　山尾志桜里氏の入党を認めるのか"></span>
+                        <span class="ttl">【立憲民主党に暗雲】　山尾志桜里氏の入党を認めるのか</span>
+                        <span class="source">安積明子</span>
+                <span class="date">10/29(日) 11:18</span>
+                </span>
+            </a>
+        </li>
+        </ol>
+    <p class="ft"><a href="https://news.yahoo.co.jp/ranking/access?ty=b" onmousedown="this.href='https://news.yahoo.co.jp/ranking/access?ty=b'">もっと見る</a></p>
+</div>
+<div class="subMod subRanking">
+    <div class="hd">
+        <h3 class="ttl">コメントの多い記事</h3>
+    </div>
+    <ol class="bd">
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171031-00000035-asahi-soci" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171031-00000035-asahi-soci'">
+                <span class="rankNum">1</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://giwiz-newstop.c.yimg.jp/im_siggGVUrT0KdWFDkEgdwV_z91w---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171031-00000035-asahi-000-3-view.jpg" width="60" height="60" alt="東名の夫婦死亡事故、危険運転罪適用し起訴　罰則重い罪"></span>
+                        <span class="ttl">東名の夫婦死亡事故、危険運転罪適用し起訴　罰則重い罪</span>
+                        <span class="source">朝日新聞デジタル</span>
+                <span class="date">10/31(火) 12:35</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171031-00000044-dal-ent" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171031-00000044-dal-ent'">
+                <span class="rankNum">2</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://giwiz-newstop.c.yimg.jp/im_siggykNIvmm_gzmJV_GqDsZpBg---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171031-00000044-dal-000-16-view.jpg" width="60" height="60" alt="海老蔵、恋人報道に「酷い」"></span>
+                        <span class="ttl">海老蔵、恋人報道に「酷い」</span>
+                        <span class="source">デイリースポーツ</span>
+                <span class="date">10/31(火) 10:27</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/hl?a=20171031-00000515-san-soci" onmousedown="this.href='https://headlines.yahoo.co.jp/hl?a=20171031-00000515-san-soci'">
+                <span class="rankNum">3</span>
+                <span class="cap">
+                        <span class="thumbnail"><img src="https://giwiz-newstop.c.yimg.jp/im_siggIFLJE9s.p3INWjRTsz8XKw---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdcefefef/q/amd/20171031-00000515-san-000-5-view.jpg" width="60" height="60" alt="座間９遺体発見、白石隆浩容疑者を逮捕「殺害した遺体を証拠隠滅、間違いない」"></span>
+                        <span class="ttl">座間９遺体発見、白石隆浩容疑者を逮捕「殺害した遺体を証拠隠滅、間違いない」</span>
+                        <span class="source">産経新聞</span>
+                <span class="date">10/31(火) 11:30</span>
+                </span>
+            </a>
+        </li>
+        </ol>
+    <p class="ft"><a href="https://news.yahoo.co.jp/ranking/comment/rate?ty=t" onmousedown="this.href='https://news.yahoo.co.jp/ranking/comment/rate?ty=t'">もっと見る</a></p>
+</div>
+<div class="subMod subRanking">
+    <div class="hd">
+        <h3 class="ttl">映像アクセスランキング</h3>
+    </div>
+    <ol class="bd">
+            <li>
+            <a href="https://headlines.yahoo.co.jp/videonews/fnn?a=20171030-00000945-fnn-soci" onmousedown="this.href='https://headlines.yahoo.co.jp/videonews/fnn?a=20171030-00000945-fnn-soci'">
+                <span class="rankNum">1</span>
+                <span class="cap">
+                        <span class="thumbnail mv "><img src="https://lpt.c.yimg.jp/im_siggBs2ZtcJ6iXyLBDmd50.75Q---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdc000000/q/amd/20171030-00000945-fnn-000-thumb.jpg" width="60" height="60" alt="わが家の真下が「崩落」説明会で住民怒り爆発"><span class="icmv_s"></span></span>
+                        <span class="ttl">わが家の真下が「崩落」説明会で住民怒り爆発</span>
+                        <span class="source">フジテレビ系（FNN）</span>
+                <span class="date">10/30(月) 18:50</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/videonews/ann?a=20171030-00000038-ann-soci" onmousedown="this.href='https://headlines.yahoo.co.jp/videonews/ann?a=20171030-00000038-ann-soci'">
+                <span class="rankNum">2</span>
+                <span class="cap">
+                        <span class="thumbnail mv "><img src="https://lpt.c.yimg.jp/im_siggCKZ2JXNh11j_6mnFFqVMZw---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdc000000/q/amd/20171030-00000038-ann-000-view.jpg" width="60" height="60" alt="海岸に下半身だけの遺体　食いちぎられたような痕"><span class="icmv_s"></span></span>
+                        <span class="ttl">海岸に下半身だけの遺体　食いちぎられたような痕</span>
+                        <span class="source">テレビ朝日系（ANN）</span>
+                <span class="date">10/30(月) 18:44</span>
+                </span>
+            </a>
+        </li>
+            <li>
+            <a href="https://headlines.yahoo.co.jp/videonews/ann?a=20171031-00000004-ann-soci" onmousedown="this.href='https://headlines.yahoo.co.jp/videonews/ann?a=20171031-00000004-ann-soci'">
+                <span class="rankNum">3</span>
+                <span class="cap">
+                        <span class="thumbnail mv "><img src="https://lpt.c.yimg.jp/im_siggAQG9O_36vsQLjlnCgG2ziQ---x60-y60-n0-pril-exp3h-bd1-bdx60-bdy60-bdc000000/q/amd/20171031-00000004-ann-000-view.jpg" width="60" height="60" alt="車4台が絡む事故“ドラレコ”捉えた車暴走の瞬間"><span class="icmv_s"></span></span>
+                        <span class="ttl">車4台が絡む事故“ドラレコ”捉えた車暴走の瞬間</span>
+                        <span class="source">テレビ朝日系（ANN）</span>
+                <span class="date">10/31(火) 5:55</span>
+                </span>
+            </a>
+        </li>
+        </ol>
+    <p class="ft"><a href="https://news.yahoo.co.jp/ranking/access?ty=v" onmousedown="this.href='https://news.yahoo.co.jp/ranking/access?ty=v'">もっと見る</a></p>
+</div>
+<div class="subMod">
+<p><a class="goTopSide btnView" id="pageTopButton" href="#" data-beacon="https://s.yimg.jp/images/clear.gif"><span>ページ上部に戻る</span></a></p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="contentsFooter">
+<span class="yjGuid"><img src="https://s.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1" height="1" alt="本文はここまでです"></span>
+<span class="yjSkip">
+<a href="#dummy"><img src="https://s.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" alt="このページの先頭へ" width="1" height="1"></a></span>
+
+
+</div>
+
+</div>
+
+<hr class="yjSeparation">
+<div id="footer">
+
+      <!-- SpaceID=0 robot -->
+  
+
+<address>
+
+<a href="https://about.yahoo.co.jp/docs/info/terms/chapter1.html#cf2nd">プライバシーポリシー</a> - <a href="https://about.yahoo.co.jp/docs/info/terms/">利用規約</a> -
+<a href="https://about.yahoo.co.jp/info/mediastatement/">メディアステートメント</a> -
+<a href="https://www.yahoo-help.jp/app/answers/detail/p/575/a_id/60137">外部サイトについて</a> -
+<a href="https://headlines.yahoo.co.jp/docs/copyright.html">著作権</a>  -
+<a href="https://headlines.yahoo.co.jp/docs/tokuteisho.html">特定商取引法の表示</a> - <a href="https://feedback.ms.yahoo.co.jp/voc/news-voc/input">ご意見・ご要望</a> - <a href="https://www.yahoo-help.jp/app/home/p/575/">ヘルプ・お問い合わせ</a><br>
+Copyright (C) 2017 Yahoo Japan Corporation. All Rights Reserved.
+</address>
+
+</div>
+
+
+</div>
+
+
+<script type="text/javascript">
+<!--
+
+if (typeof YAHOO == "undefined" || !YAHOO) {
+  YAHOO = {}
+}
+
+if (typeof YAHOO.JP == "undefined" || !YAHOO.JP) {
+  YAHOO.JP = {}
+}
+
+if (typeof YAHOO.JP.News == "undefined" || !YAHOO.JP.News) {
+  YAHOO.JP.News = {}
+}
+
+if (typeof YAHOO.JP.News.Top == "undefined" || !YAHOO.JP.News.Top) {
+  YAHOO.JP.News.Top = {}
+}
+
+if (typeof YAHOO.JP.News.Top.Params == "undefined" || !YAHOO.JP.News.Top.Params) {
+  YAHOO.JP.News.Top.Params = {}
+}
+
+YAHOO.JP.News.Top.Params = {
+  common: {
+    viewtime: 1509430474  },
+  feed: {
+    list: {
+      crumb: ''
+    },
+    expire: 1800000  },
+  theme: {}
+}
+-->
+</script>
+<script type="text/javascript">
+YAHOO.JP.News.Top.Params.theme.button = {
+  'btnClass' : 'yjxFollow',
+  'btnSize' : 'small',
+  'isCache'  : true,
+  'frameWidth' : 37,
+  'frameHeight' : 37,
+};
+</script>
+
+<script type="text/javascript" src="//yads.c.yimg.jp/js/yads-async.js"></script>
+<script type="text/javascript" src="//s.yimg.jp/images/listing/tool/yads/yads-timeline-ex.js"></script>
+<script type="text/javascript">
+var streamAdParam = {
+      yads_ad_ds : '71913_160771'
+    };
+</script>
+
+
+<script type="text/javascript" src="https://s.yimg.jp/images/jpnews/js/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/jpnews/js/libs/json/2.0.0/json.min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/jpnews/js/libs/lodash-compat/3.2.0/lodash-compat.min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/jpnews/js/libs/knockout/3.3.0/knockout.min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/follow/website/plugin/external/js/button-1.0.0.min.js"></script>
+<script type="text/javascript" src="https://s.yimg.jp/images/jpnews/js/top/pc/pc_top-07fba2d48b4c9107611d.js"></script>
+
+
+</body>
+</html>
+
+<!-- web110.top.news.ssk.ynwp.yahoo.co.jp Tue Oct 31 15:14:33 JST 2017 -->

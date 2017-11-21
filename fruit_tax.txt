@@ -1,0 +1,7 @@
+banana は 216 円
+mango は 432 円
+kiwi は 87 円
+apple は 108 円
+melon は 951 円
+orange は 130 円
+strawberry は 519 円
